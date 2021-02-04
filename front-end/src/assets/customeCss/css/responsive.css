@@ -1,0 +1,890 @@
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1060px;
+    }
+
+    .log_sign {
+        display: none;
+    }
+
+
+}
+
+@media(max-width: 1199px) {
+    #menu li a {
+        font-size: 15px;
+        padding: 2px 15px;
+    }
+
+    .log_sign {
+        display: none;
+    }
+
+    .status_btn {
+        width: 83px;
+    }
+
+    .tab_box nav a span {
+        padding: 0px 24px;
+        font-size: 14px;
+    }
+
+    .qm .collapse .select_wrapper select {
+        min-width: 240px;
+    }
+    .radio_translation .mr_30 {
+        margin-right: 12px;
+    }
+
+    /* plan area */
+
+    .last_plan {
+        height: 496px;
+    }
+
+    .plan_item h2 {
+        font-size: 35px;
+    }
+    .plan_item ul li {
+        font-size: 12.8px;
+    }
+
+}
+
+@media(min-width: 992px) {
+    .maphsc_wrapper.v2 {
+        margin-top: 110px;
+    }
+
+    .border-lg-0{
+        border: none !important;
+    }
+
+    .login_header{
+        height: 100% !important;
+        margin-top: 30px;
+    }
+}
+
+@media(min-width: 768px) {
+    .havbl_wrap {
+        padding-top: 0;
+    }
+
+    .cafe_icon {
+        margin-top: 20px;
+    }
+
+    #edit .modal-dialog {
+        max-width: 690px;
+    }
+
+    #add .modal-dialog {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        width: 100%;
+    }
+
+    .business_first {
+        border-right: none;
+    }
+
+    header {
+        height: 70px;
+    }
+
+    #menu {
+        width: 100%;
+        position: fixed;
+        top: 69px;
+        left: 0;
+        padding-right: 0;
+        text-align: center;
+        padding-bottom: 30px;
+        display: none;
+        background-color: #0D97DF;
+    }
+
+    #menu li {
+        display: block;
+    }
+
+    #menu li a {
+        border: none;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    .toggle_bar {
+        top: -15px;
+    }
+
+    .content_wrapper {
+        margin-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .maphsc_wrapper {
+        padding-bottom: 80px;
+    }
+
+    .dn {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+    }
+
+    .header_btn {
+        display: none;
+    }
+
+    .log_sign {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    .log_sign a {
+        font-size: 16px;
+        color: #fff;
+        margin-left: 20px;
+        font-weight: 400;
+    }
+
+    .popular_txt {
+        display: block;
+    }
+
+    .hsc_scroll {
+        padding-right: 0;
+    }
+
+    .date_time ul li {
+        padding: 5px 5px 5px 5px;
+        margin: 10px 2px 5px;
+    }
+
+    .tocolw a {
+        font-size: 14px;
+    }
+
+    .fix_btn {
+        bottom: 59px;
+    }
+
+    .que_head h2 {
+        font-size: 20px;
+    }
+
+    .que_head p {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .que_head span {
+        font-size: 15px;
+        margin: 1px 5px 0px 45px;
+    }
+
+    .que_head span.ml_30 {
+        margin-left: 7px !important;
+    }
+
+    .select_wrapper select.border-box {
+        width: 165px;
+    }
+
+    .sms_panel {
+        margin-top: 15px;
+    }
+
+    .sms_panel .status_btn {
+        height: 83px;
+    }
+
+    .date_time ul li {
+        font-size: 10px;
+    }
+
+    .tab_box nav a {
+        padding: 11px 0px;
+        font-size: 12px;
+    }
+
+    .tab_box nav a span {
+        padding: 0px 17.98px;
+    }
+
+    .map_img {
+        margin-top: 30px;
+    }
+
+    table.shift_table tbody tr td {
+        width: 0%;
+    }
+
+    table.department_table thead tr th,
+    table.department_table tbody tr td {
+        font-size: 12px;
+    }
+
+    .qr_box h3 {
+        margin-top: 20px;
+    }
+
+    .border_rigntedit {
+        border-right: none;
+    }
+
+    .edit_inf {
+        width: 155px;
+        margin-bottom: 10px;
+    }
+
+    .department_box {
+        margin-bottom: 70px;
+    }
+
+    .login_box h2 {
+        font-size: 31px;
+    }
+
+    .login_item label {
+        font-size: 16px;
+    }
+
+    .login_item input {
+        height: 50px;
+    }
+
+    .check_fun label,
+    .check_fun a {
+        font-size: 12px !important;
+    }
+
+    .cr_btn1,
+    .cr_btn2,
+    .login_btn {
+        height: 50px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .cr_btn1 {
+        width: 229px;
+    }
+
+    .login_wrapper {
+        margin-top: 70px;
+    }
+
+    .login_wrapper {
+        height: auto;
+    }
+
+    .qr_box {
+        margin-top: 30px;
+    }
+
+    .genarate_btn {
+        font-size: 12px;
+    }
+
+    .tab_box nav a span {
+        padding: 0px 12.8px;
+        font-size: 12px;
+    }
+    .buslist_itme1 {
+        border-right: none;
+    }
+    .radio_only {
+        margin-left: 0;
+    }
+    .ml_select {
+        margin-left: 69px;
+        width: 203px;
+    }
+    .plan_wrapper .no-gutters>.col, .plan_wrapper .no-gutters>[class*=col-] {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .plan_wrapper .no-gutters {
+        margin: 0 -15px;
+    }
+}
+
+@media(min-width: 768px) {
+    .tocolbox {
+        border-bottom: 1px solid #C4C4C4;
+        padding-bottom: 20px;
+    }
+}
+
+/*Medium devices (tablets, 767px and down)*/
+@media (max-width: 767px) {
+    .client_bg {
+        min-height: 220px;
+    }
+
+    .ordermenu_wrapper .client_bg {
+        min-height: 137px;
+    }
+
+    .havbl_wrap {
+        padding: 20px 0px 0px 0px;
+        border-top: none;
+        margin-top: 0;
+    }
+
+    .text_titleb {
+        padding-top: 0;
+    }
+
+    .hav_bwrap .tocolbox {
+        border-top: 1px solid #C4C4C4 !important;
+        padding-top: 20px !important;
+    }
+
+    .hsc_scroll {
+        height: auto;
+    }
+
+    .tocolbox {
+        border-top: 1px solid #C4C4C4;
+        padding-top: 20px;
+    }
+
+    .que_head span {
+        margin-left: 0;
+    }
+
+    #accordion .card .card-header h4 {
+        font-size: 12px;
+    }
+
+    #accordion .mr_40 {
+        margin-right: 20px;
+    }
+
+    .select_wrapper select.border-box {
+        width: 88px;
+        font-size: 12px;
+    }
+
+    .sms_panel .status_btn {
+        height: 80px;
+        width: 80px;
+        padding: 25px;
+    }
+
+    .tab_box nav a {
+        padding: 11px 0px;
+        font-size: 10px;
+    }
+
+    .business_first {
+        border-right: none;
+    }
+
+    .business_first input {
+        width: 100%;
+    }
+
+    .busin_borugh select {
+        width: 100% !important;
+    }
+
+    .selectinput_box {
+        background-position: 96% center;
+    }
+
+    table.shift_table {
+        border-right: none;
+    }
+
+    .deep_btn {
+        font-size: 11px;
+    }
+
+    .login_wrapper::before {
+        width: 100%;
+    }
+
+    .cr_btn1 {
+        width: 300px;
+    }
+
+    .login_box {
+        margin: 60px 0;
+    }
+
+    .que_head h2{
+        margin-right: 10px;
+    }
+
+    .que_head p {
+        font-size: 14px;
+        margin-left: 0px;
+    }
+
+    .title_header{
+        margin-right: 10px;
+    }
+
+    .que_head span{
+        font-size: 13px;
+    }
+    
+    .mr_m_15{
+        margin-right: 15px;
+    }
+
+    .date_accordion {
+        width: 91px;
+        font-size: 12px;
+    }
+
+    .client_img_wrapper {
+        width: 25%;
+    }
+
+    .client_id{
+        width: 40px;
+    }
+
+    .accordion_btn[aria-expanded="true"] .client_id{
+        width: auto;
+    }
+    .ml_select {
+        margin-left: 44px;
+        width: 180px;
+    }
+    .trans_overlay {
+        margin-top: 15px;
+    }
+    .last_plan {
+        height: unset;
+        z-index: 999;
+    }
+    .last_plan .pln_btn {
+        position: unset;
+        transform: none;
+        width: 100%;
+    }
+
+    .menu_categories_header,
+    .menu_categories{
+        font-size: 14px;
+    }
+}
+
+/*Small devices (landscape phones, 575px and down)*/
+@media (max-width: 575px) {
+    .box_wrapper {
+        height: 90px;
+    }
+
+    .ticket_img {
+        width: 94px;
+        height: 90px;
+    }
+
+    .content_box {
+        padding: 0 10px 0 15px;
+    }
+
+    .content_box p {
+        font-size: 10px;
+    }
+
+    .content_box h6 {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .section_title {
+        font-size: 16px;
+    }
+
+    .log_sign a {
+        font-size: 12px;
+        margin-left: 9px;
+    }
+
+    .top_title {
+        font-size: 16px;
+    }
+
+    .hs_size {
+        height: 90px;
+        margin-left: -35px;
+    }
+
+    .hsc_box {
+        height: 90px;
+    }
+
+    .hsc_2 .ti {
+        margin-bottom: 4px;
+        font-size: 13px;
+    }
+
+    .client_bg.v2 {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        min-height: 135px;
+        height: 135px;
+    }
+
+    .maphsc_wrapper.v2 {
+        margin-top: 69px;
+        padding-bottom: 90px;
+    }
+
+    .que_head span {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .que_head p {
+        margin-left: 0;
+    }
+
+    .que_head span.ml_30 {
+        margin-left: 0 !important;
+    }
+
+    #accordion .card-header {
+        height: auto;
+    }
+
+    #accordion .card-header .border_box_wrapper {
+        margin-top: 15px;
+    }
+
+    .sms_panel .status_btn {
+        height: 52px;
+        width: 52px;
+        padding: 10px;
+    }
+
+    .accordion_btn[aria-expanded="true"] h4 {
+        font-size: 16px !important;
+    }
+
+    #accordion .mr_15 {
+        margin-right: 10px;
+    }
+
+    .que_head h2 {
+        font-size: 14px;
+    }
+
+    /* .que_head span{
+		font-size: 12px;
+	} */
+
+    .man_lg {
+        margin-bottom: 15px;
+    }
+
+    .toggler_accordion {
+        top: 0.75rem;
+        transform: translateY(0);
+    }
+
+    .accordion_btn[aria-expanded="true"] .toggler_accordion {
+        transform: translateY(0) rotate(180deg);
+    }
+
+    table.shift_table tbody tr td {
+        font-size: 12px;
+    }
+
+    .tab_box nav a {
+        width: 50%;
+        text-align: center;
+    }
+
+    .tab_box nav a span {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .tab_box nav a:nth-child(odd) span {
+        border: none;
+    }
+
+    .business_box,
+    .maping_box,
+    .department_box,
+    .opentime_box {
+        padding: 25px 15px !important;
+    }
+
+    .edit_box {
+        padding: 40px 15px;
+    }
+
+    .maping_box p {
+        font-size: 12px;
+    }
+
+
+    .maphsc_wrapper {
+        margin-top: 70px;
+    }
+
+    .hsc_scroll.app_scroll.mt_15 {
+        margin-top: 0;
+    }
+
+    .app_scroll {
+        height: auto !important;
+    }
+
+    .border-box {
+        min-width: 50px;
+    }
+
+    .border_box_wrapper {
+        margin-top: 10px;
+    }
+
+    #accordion .mr_40 {
+        margin-right: 10px;
+    }
+
+    .border_box_2 {
+        min-width: 45px !important;
+    }
+
+    .login_item input {
+        font-size: 13px;
+        padding-left: 15px;
+    }
+
+    .login_wrapper {
+        overflow: hidden;
+    }
+
+    .qm .collapse .select_wrapper select {
+        min-width: 200px;
+    }
+
+    .qm .card-header p{
+        font-size: 11px;
+    }
+
+    .cat_img.new_cat{
+        right: -6px;
+    }
+
+    .top_content .d-flex{
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .title_header{
+        margin-right: 10px;
+    }
+    .bs{
+        font-size: 16px;
+    }
+
+    .client_img_wrapper {
+        width: 120px;
+    }
+    .busilist_item2 h2 {
+        max-width: 163px;
+    } 
+    .alert_p {
+        margin: 30px 0;
+    }
+    .alert_p p {
+        font-size: 12px;
+    }
+
+    .date_out h2 {
+        font-size: 14px;
+    }
+    .plan_item ul li {
+        font-size: 11.8px;
+    }
+    .text_bottom h3 {
+        font-size: 16px;
+    }
+    .text_bottom h4 {
+        font-size: 14px;
+    }    
+
+    
+}
+
+
+@media (max-width: 374px) {
+    .interest_box a {
+        font-size: 10px;
+    }
+
+    .box_wrapper {
+        height: 80px;
+    }
+
+    .hsc_box {
+        height: 80px;
+    }
+
+    .hs_size {
+        height: 80px;
+        margin-left: -50px;
+    }
+
+    .hsc_2 {
+        padding-left: 0;
+    }
+
+    .ticket_img {
+        width: 84px;
+        height: 80px;
+    }
+
+    .content_box {
+        padding: 0 1px 0 11px;
+    }
+
+    .content_box p {
+        font-size: 9px;
+    }
+
+    .content_box h6 {
+        font-size: 10px;
+    }
+
+    .hsc_2 .ti {
+        font-size: 12px;
+    }
+
+    .hsc_3 p {
+        font-size: 12px;
+    }
+
+    .hsc_3 span {
+        font-size: 12px;
+    }
+
+    .hsc_3 img {
+        height: 10px;
+    }
+
+    .text {
+        max-width: 114px;
+        font-size: 10px;
+    }
+
+    .monday_wrapper {
+        width: 263px;
+        height: 276px;
+    }
+
+    .havbl_wrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .date_time ul li {
+        padding: 5px 5px 5px 5px;
+        margin: 5px 2px;
+    }
+
+    .tocolw select {
+        font-size: 10px;
+        padding: 8px 21px 8px 6px;
+        background-position: 105px center;
+    }
+
+    .cafe_icon p {
+        font-size: 11px;
+    }
+
+    .order_item {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .date_time ul li {
+        float: left;
+        width: 70px;
+        height: 70px;
+    }
+
+    .sms_panel .status_btn {
+        height: 45px;
+        width: 45px;
+    }
+
+    #accordion .mr_15 {
+        margin-right: 5px;
+    }
+
+    .second-box img {
+        height: 40px !important;
+        width: 40px !important;
+    }
+
+    .border_box_2 {
+        min-width: 39px !important;
+    }
+
+    .cr_btn1 {
+        width: 245px;
+    }
+
+    .que_tab a {
+        width: 10px;
+        max-width: 10px;
+        height: 10px;
+    }
+
+     .bs{
+        font-size: 14px;
+    }
+
+    .qm .collapse .select_wrapper select {
+        min-width: 186px;
+    }
+
+    .cat_img.new_cat {
+        right: 4px;
+    }
+
+    .que_tab .nav span {
+        margin: -9px 2px 0;
+    }
+
+    .client_img_wrapper {
+        width: 40%;
+    }
+}
+
+@media (max-width: 359px){
+    .menu_box .menu_img{
+        width: 90px;
+        min-width: 90px;
+        min-height: 100px;
+    }
+
+    .menu_box h6{
+        font-size: 13px;
+    }
+}

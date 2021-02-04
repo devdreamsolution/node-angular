@@ -1,0 +1,26 @@
+ <div class="menu_box d-flex">
+   <div class="menu_img" style="background-image: url({{item.imageUrl}});">
+    <img *ngIf="item.vegeterian" src="assets/img/icons/suitable_vegetarian.png" alt="">
+    <img *ngIf="item.glutonfree" src="assets/img/icons/suitable_gluten_free.png" alt="">
+    <img *ngIf="item.allergies" src="assets/img/icons/suitable_contain_nuts.png" alt="">
+    <img *ngIf="item.vegan" src="assets/img/icons/suitable_vegan.png" alt="">
+  
+    </div>
+    <div class="media-body">
+        <h6 class="d-flex justify-content-between">
+            <span>{{item.name}}</span>
+            <span class="price">{{ item.unitprice | currency:'GBP':'symbol':'1.2-2' }}</span>
+        </h6>
+        <p>{{ item.description }}</p>   
+        <div class="text-right">
+            <div class="apoint_spinner">
+                <div class="nice-number">
+                    <button type="button" (click)="minus.emit(item)">-</button>
+                    <input type="number" [value]="item.quantity" data-nice-number-initialized="true" readonly
+                        style="width: 3ch;">
+                    <button type="button" (click)="plus.emit(item)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+<div class="menu_categories position-relative">
+  <div class="container" style="margin-top: 130px;">
+    <div class="row">
+
+      <div class="col-12" >
+                    
+        <ng-container *ngIf=" businessData != null && businessData.business_active == true">
+          <form action="#">
+            <div class="search_box">
+              <input type="text" style="width: 91% ;border: 0; outline:none;"  [(ngModel)]="searchmodel" name="searchmodel" (keyup)="setFilter()">
+              <a (click)="endSearch()"> <img src="assets/img/icon_close.png" style="width: 20px;height:20px;" alt=""> </a>              
+            </div>            
+          </form>
+        </ng-container>
+                                         
+            <ng-container *ngIf="isBusinessActive == false">
+              <div class="col-12 mt_20 text-center" style="background-color: gray; padding: 70px;">
+                <p>Business Not Active</p>
+              </div>              
+            </ng-container> 
+            
+            <ng-container *ngIf=" isBusinessActive == true && isMenuActive == false">
+              <div class="col-12 mt_20 text-center" style="background-color: gray; padding: 70px;">
+                <p >No Active Menu</p>
+              </div>                
+            </ng-container>            
+                                       
+        <div class="accordion" *ngIf="menu">
+            <ng-container *ngFor="let cat of menu">
+
+                <ng-container *ngIf="cat.category != null">
+                  <a class="accordion_toggler" href="#" data-toggle="collapse" data-target="#collapse_{{cat.cat_id}}"
+                    (click)="accordianToggle(cat.cat_id)" aria-expanded="false">{{cat.category}}
+                    <i id="ioc_{{cat.cat_id}}" class="fas fa-angle-down top_angle"></i>
+                  </a>
+                </ng-container>
+                            
+                <div id="top_{{cat.cat_id}}" [ngClass]="(cat.isShown==true)?'top  collapse show':'top collapse'" data-parent=".accordion">
+                    <div class="mb_20">
+                        <ng-container *ngFor="let subCat of cat.items">               
+                            <div>
+                              <ng-container *ngIf="subCat.subcategory != null">
+                                <a class="accordion_toggler" href="#" data-toggle="collapse"
+                                  style="background-color: #fff; border: 1px solid #0D97DF; color: #0D97DF;"
+                                  data-target="#bottom_{{cat.cat_id}}_{{subCat.sub_id}}"
+                                  (click)="subAccordianToggle(cat.cat_id, subCat.sub_id)" aria-expanded="false">{{subCat.subcategory}}
+                                  <i id="ioc_{{cat.cat_id}}_{{subCat.sub_id}}" class="fas fa-angle-down sub_angle"></i>
+                                </a>
+                              </ng-container>
+                            </div>                          
+                            
+                            
+                            <div id="bottom_{{cat.cat_id}}_{{subCat.sub_id}}" [ngClass]="(subCat.isShown==true)?'bottom collapse show':'bottom collapse'"
+                              data-parent=".accordion">
+                              <div class="mb_20">
+                                <ng-container *ngFor="let scItem of subCat.items">
+                                  <app-menu-item [item]="scItem" (minus)="minus(scItem)" (plus)="plus(scItem)" ></app-menu-item>
+                                </ng-container>
+                              </div>
+                            </div>
+                    
+                        </ng-container>
+                    </div>
+                </div>
+            
+            </ng-container>
+
+        </div>                            
+      </div>
+
+  
+      
+      <div class="bottom_area">
+        <div class="powered_area">
+          <a href="https://2cool2q.com/"  target="_blank" style="color: white" >Powered by 2Cool2Q.com</a>
+        </div>
+      </div> 
+
+
+      <!-- <app-footer></app-footer> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,201 @@
+<div class="menu_categories position-relative">
+
+  
+  <div class="container" style="margin-top: 140px;">
+    
+    
+    <div class="row">
+      <!-- col-md-12 col-12 -->
+      <div class="col-md-12 col-12">
+        <ng-container *ngFor="let item of menuItems ">
+          
+          <ng-container *ngIf="item.count > 0">
+
+            <div [ngClass]="(submitted==true)?'d-flex':'menu_box d-flex'">
+              <div class="media-body" style=" padding: 10px 0px 10px 0px !important; font-size: 15px; ">
+                <div class="d-flex justify-content-between">
+                  
+                  <div class="col-md-5 col-5">
+                    <span style="font-size: 14px;font-weight: 600;">{{item.name}}</span>
+                  </div>
+                  
+                  <div class="col-md-4 col-4" style="align-self: center">
+                    <div class="text-right">
+                      
+                      <div class="apoint_spinner" *ngIf="!submitted">
+                        <div class="nice-number">
+                          <button type="button" (click)="minus(item)">-</button>
+                          <input type="number" [value]="item.count" data-nice-number-initialized="true"
+                            style="width: 3ch;" readonly>
+                          <button type="button" (click)="plus(item)">+</button>
+                        </div>
+                      </div>
+
+                      <div class="apoint_spinner" *ngIf="submitted" >
+                        <table>
+                          <tr>
+                            <td style="padding-right: 10px">
+                              {{item.count}}
+                            </td>
+                            <td style="padding-right: 10px">
+                              x
+                            </td>
+                            <td style="padding-right: 20px;">
+                              <span class="price" style="font-size: 15px;">
+                                {{ item.unit_price * item.count |
+                                currency:'GBP':'symbol':'1.2-2'}}</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+
+
+                    </div>
+                  </div>
+
+
+                  
+
+                  <div class="col-md-3 col-3 text-right" *ngIf="!submitted" style="align-self: center">
+                    <span class="price" style="font-size: 15px;">
+                      {{ item.unit_price * item.count |
+                      currency:'GBP':'symbol':'1.2-2'}}</span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </ng-container>          
+
+        </ng-container>
+
+
+         <!-- [ngStyle]="{'background-image':getBackgroundImageUrl() }" -->
+
+        <div class="d-flex justify-content-between" style="margin-top: 20px !important;">
+              <div class="col-md-6 col-6">
+                <span style="font-size:12px;">Name</span>              
+                <input type="text" placeholder="Client Name"  [(ngModel)]="client_name" name="client_name" class="form-control"  [readonly]="!!submitted" />
+              </div>
+              <div class="col-md-6 col-6">
+                <span style="font-size:12px;">Table/Service Unit</span>
+                <input type="text" placeholder="Table Number" [(ngModel)]="table_number" name="table_number" class="form-control" [readonly]="!!submitted"/>
+              </div>
+        </div>
+
+
+        <div style="margin-top: 20px !important;" *ngIf="submitted">
+          <div class="d-flex justify-content-between">
+            <div class="col-md-8 col-8">
+                <span>Total</span>
+            </div>
+            <div class="col-md-4 col-4">            
+              £{{totalPrice}}
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <div class="col-md-8 col-8">
+              <span>Taxes</span>
+            </div>
+            <div class="col-md-4 col-4">
+              £{{taxes}}
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <div class="col-md-8 col-8">
+              <span>Service Charges</span>
+            </div>
+            <div class="col-md-4 col-4">
+              £{{service_charges}}
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <div class="col-md-8 col-8">
+              <span>Discounts & Promotions</span>  
+            </div>
+            <div class="col-md-4 col-4">
+              £{{ discount}}
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="d-flex justify-content-between" style="padding: 22px 10px 22px 10px !important; border-top: 4px solid #ccc; margin-top: 10px;"  *ngIf="submitted">
+          <div class="col-md-8 col-8">
+              <span>Grand Total</span>
+          </div>
+          <div class="col-md-4 col-4">            
+            £{{grand_total}}
+          </div>
+        </div>
+      
+        <div class="d-flex" *ngIf="!submitted && menuItems && menuItems.length">
+          <div class="media-body"
+            style="padding: 22px 25px 5px 10px !important;border-top: 4px solid #ccc; margin-top: 50px;">
+            <div class="d-flex justify-content-between">
+              <div class="col-sm-9">
+                <span style="font-size:20px;">Total</span>
+              </div>
+              <div *ngIf="!submitted" class="col-sm-3 text-right">
+                <span class="price" style="font-size: 20px;">{{ totalPrice | currency:'GBP':'symbol':'1.2-2'}}</span>
+              </div>
+              <div *ngIf="submitted" class="col-sm-3 text-right" style="padding-right : 50px;">
+                <span class="price" style="font-size: 20px;">{{ totalPrice | currency:'GBP':'symbol':'1.2-2'}}</span>
+              </div>
+            </div>
+            <div *ngIf="submitted" class="d-flex justify-content-between">
+              <div class="col-sm-9">
+                <span style="font-size:15px;">Date</span>
+              </div>
+              <div class="col-sm-3 text-right">
+                <span style="font-size: 15px;">{{ currentTime | date: 'dd/mm/yyy h:mm a'}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div *ngIf="!submitted  && menuItems && menuItems.length" class="bottom_area" >
+       
+        <div class="powered_area" style="margin-top: 20px;">      
+          <button type="button" class="btn" style="color: white;" (click)="openConfirmationDialog()">CONFIRM ORDER</button>
+        </div>
+
+
+      </div>
+      <div *ngIf="submitted || !menuItems || totalPrice == 0 " class="bottom_area">
+        <div class="powered_area">
+          <a type="button" class="btn" style="color: white" (click)="navigationToMenu()">NEW
+            ORDER</a>
+        </div>
+      </div>
+
+
+      <div class="bottom_area">
+        <div class="powered_area">
+          <a href="https://2cool2q.com/"  target="_blank" style="color: white" >Powered by 2Cool2Q.com</a>
+        </div>
+      </div>      
+      
+      
+    </div>
+
+
+
+
+
+      
+
+
+
+  </div>
+
+  
+
+
+</div>

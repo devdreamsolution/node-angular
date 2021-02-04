@@ -1,0 +1,25 @@
+.mat-expansion-panel-header {
+  background: #0f97df !important;
+  margin-top:10px;
+}
+
+// .menu_categories .accordion a.accordion_toggler[aria-expanded="true"] i{
+//   transform: translateY(-50%) rotate(180deg);
+// }
+.price {
+  display: inline-block;
+}
+
+.price::first-letter {
+  padding-right: 0.3em;
+}
+
+.menu_box .menu_img{
+  width : 125px;
+}
+
+.menu_box .menu_img img {
+width:20px;
+height: 20px;
+margin : 3px;
+}

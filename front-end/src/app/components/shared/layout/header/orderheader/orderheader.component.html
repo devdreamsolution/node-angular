@@ -1,0 +1,43 @@
+<div class="menu_categories_header" [ngStyle]="{'background-image':getBackgroundImageUrl() }" style="position: fixed; top: 0; width: 100%; z-index: 1;">
+  
+  <!-- style="background-image: url(../../../../../../assets/img/pizza_img.jpg);    
+  position: fixed; top: 0; width: 100%; z-index: 1;" -->
+
+  <div class="d-flex align-items-start justify-content-between">
+        
+      <a (click)="onBack()">
+        <p class="business_title" > 
+          {{ businessData != null ? businessData.business_name :'Business not registered'}}  <br>
+          {{ businessData != null ? businessData.department_name :''}}  
+        </p>
+      </a>            
+    
+    <a href="javascript:void(0)" class="cart_box media align-items-center" (click)="order()">
+      <!-- <i class="fa" style="font-size:20px">&#xf07a;</i> -->
+      <!-- <a class="d-inline-block notification" style="font-size:20px"> -->
+      <!-- <span class="badge">9</span> -->
+      <img src="../../../../../../assets/img/cart.png" alt="">
+      <!-- </a> -->
+      
+      <span *ngIf="totalQuantity" class='badge badge-warning' id='lblCartCount'> {{totalQuantity}} </span>
+
+      <div class="media-body text-center trolley_price">
+        <div class="currency_symbol">
+          <!-- <span> YOUR ORDER </span> <br> -->
+          <span *ngIf="totalPrice" class="price">
+            {{ totalPrice | currency:'GBP':'symbol':'1.2-2' }}
+          </span>
+          <span *ngIf="!totalPrice" class="price"> £0.00
+          </span>
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+  <div class="text-center">
+    <span class="business_title v2"  *ngIf=" headerText != null " >{{menuData != null ? menuData.MENU_name : 'Menu'}}</span>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

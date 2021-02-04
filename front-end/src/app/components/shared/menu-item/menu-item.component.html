@@ -1,0 +1,38 @@
+ <div class="menu_box d-flex">
+   <div *ngIf="item.item_link" class="menu_img" style="background-image: url({{item.item_link}});">
+
+    <!--
+        <img *ngIf="item.vegeterian" src="assets/img/vegetarian.png" alt="">
+        <img *ngIf="!item.allergies" src="assets/img/Glutenfree.png" alt="">
+        <img hidden src="assets/img/Group1344.png" alt="">
+        <img *ngIf="item.vegan" src="assets/img/vegan.png" alt="">
+      -->
+    </div>
+    <div class="media-body">
+        <h6 class="d-flex justify-content-between">
+            <span class="item_title">
+                {{item.name}}
+
+                <img *ngIf="item.vegetarian" src="assets/img/icons/suitable_vegetarian.png" alt="">
+                <img *ngIf="item.glutten_free" src="assets/img/icons/suitable_gluten_free.png" alt="">
+                <img *ngIf="item.allergies" src="assets/img/icons/suitable_contain_nuts.png" alt="">
+                <img *ngIf="item.vegan" src="assets/img/icons/suitable_vegan.png" alt="">
+            </span>
+
+            <span class="price">{{ item.unit_price | currency:'GBP':'symbol':'1.2-2' }}</span>
+        </h6>
+        <p > 
+           <span class="item_des" >  {{ item.des }} </span>
+        </p>   
+        <div class="text-right">
+            <div class="apoint_spinner">
+                <div class="nice-number">
+                    <button type="button" (click)="minus.emit(item)">-</button>
+                    <input type="number" [value]="item.count" data-nice-number-initialized="true" readonly
+                        style="width: 3ch;">
+                    <button type="button" (click)="plus.emit(item)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

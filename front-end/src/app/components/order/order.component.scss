@@ -1,0 +1,17 @@
+.recap {
+  color: #ffffff;
+  background-color: #0D97DF;
+  font-weight: 600;
+  padding: 10px 68px;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.price {
+  display: inline-block;
+}
+
+.price::first-letter {
+  padding-right: 0.3em;  
+}
